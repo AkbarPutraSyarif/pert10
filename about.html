@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Lifestyle Theme</title>
+    <title>About Us - Lifestyle Theme</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -59,47 +59,17 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .card {
+        .section {
             background-color: var(--primary-bg);
-            color: var(--text-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             border-radius: 8px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            padding: 20px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .card-body {
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex-grow: 1;
-        }
-
-        .btn {
-            background-color: var(--highlight);
-            color: var(--white);
-            border: none;
-            padding: 0.5rem 1.5rem;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: auto;
-        }
-
-        .btn:hover {
-            background-color: var(--accent);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        .section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         footer {
@@ -111,10 +81,6 @@
 
         footer a {
             color: var(--white);
-        }
-
-        .section-title {
-            margin-bottom: -2rem;
         }
 
         .modal-body form {
@@ -144,6 +110,22 @@
         .modal-body button:hover {
             background-color: var(--accent);
         }
+
+        .carousel-item {
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .carousel-caption h5,
+        .carousel-caption p {
+            color: blue;
+        }
     </style>
 </head>
 
@@ -158,10 +140,10 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link active" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
@@ -184,51 +166,82 @@
             </div>
         </div>
     </nav>
-    <main class="container">
-        <section class="my-5">
-            <hgroup>
-                <h2>Welcome to the Lifestyle Hub</h2>
-                <h3>Explore trends, wellness, and living your best life</h3>
-            </hgroup>
+
+    <main class="container my-5">
+        <div class="section">
+            <h2>About Us</h2>
             <p>
-                Lifestyle is all about finding balance, embracing health, and living in the moment. Whether you're into
-                fitness, mindfulness, or just looking to elevate your daily routines, you've come to the right place.
+                At Lifestyle Vibes, we are dedicated to inspiring individuals to live a balanced and healthy lifestyle.
+                Our mission is to provide valuable insights, tips, and resources that promote wellness, fitness, and
+                mindfulness.
             </p>
-        </section>
-
-        <section>
-            <h3 class="text-center section-title">Latest in Wellness</h3>
-            <div class="grid">
-                <article class="card">
-                    <img src="Gambar/meditation.jpg" alt="Meditation and mindfulness" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Meditation & Mindfulness</h5>
-                        <p class="card-text">Discover techniques to find inner peace and relaxation through mindful
-                            meditation practices.</p>
-                        <a href="#" class="btn">Read More</a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img src="Gambar/healtyr.jpg" alt="Healthy recipes" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Healthy Recipes</h5>
-                        <p class="card-text">Explore nutritious and easy-to-make recipes to fuel your body and mind.</p>
-                        <a href="#" class="btn">Read More</a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img src="Gambar/fitness.jpg" alt="Outdoor fitness" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">Outdoor Fitness</h5>
-                        <p class="card-text">Engage with nature while staying fit with outdoor workout ideas and
-                            routines.</p>
-                        <a href="#" class="btn">Read More</a>
-                    </div>
-                </article>
+            <p>
+                We believe that a holistic approach to living well encompasses not just physical health, but also mental
+                and emotional well-being. Our team is passionate about sharing knowledge on nutrition, fitness,
+                mindfulness practices, and the latest trends in wellness.
+            </p>
+        </div>
+    
+        <div class="section">
+            <h3>Our Vision</h3>
+            <p>
+                Our vision is to create a community where individuals can connect, share, and grow together towards a
+                healthier and happier life. We strive to empower our readers with the tools and knowledge to achieve
+                their wellness goals.
+            </p>
+        </div>
+    
+        <h3 class="mt-5">Meet the Team</h3>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
             </div>
-        </section>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="Gambar/waazo.jpg" class="d-block" alt="Mike Wazowski">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Mike Wazowski</h5>
+                        <p>Founder & Wellness Coach</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="Gambar/remy.jpg" class="d-block" alt="Remy The Rodent">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Remy The Rodent</h5>
+                        <p>Nutrition Expert</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Gambar/mike.jpg" class="d-block" alt="Mike O Hearn">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Mike O Hearn</h5>
+                        <p>Fitness Trainer</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Gambar/vegan.jpg" class="d-block" alt="Team Member">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>The Vegan Teacher</h5>
+                        <p>Mindfulness Instructor</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </main>
 
     <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
@@ -286,8 +299,7 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
