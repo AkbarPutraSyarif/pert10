@@ -36,6 +36,30 @@
             color: var(--highlight);
         }
 
+        .dropdown-menu {
+            padding: 0;
+            border: 1px solid var(--highlight);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .dropdown-menu-wide {
+            min-width: 500px;
+            min-height: 290px;
+        }
+
+        .dropdown-item {
+            padding: 0.15rem 1rem;
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.2;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--highlight);
+            color: var(--white);
+        }
+
         h2,
         h3,
         p {
@@ -51,6 +75,7 @@
             font-weight: bold;
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
             margin-right: 1rem;
+            text-decoration: none;
         }
 
         .Subscribe:hover,
@@ -126,13 +151,26 @@
         .carousel-caption p {
             color: blue;
         }
+
+        @media (max-width: 768px) {
+            .navbar-brand {
+                text-align: center;
+                width: 100%;
+            }
+
+            .Subscribe {
+                text-align: center;
+                width: 50%;
+                margin-left: 10rem;
+            }
+        }
     </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Lifestyle Vibes</a>
+            <a class="navbar-brand d-flex justify-content-center" href="index.html">Lifestyle Vibes</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
                 aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -160,8 +198,19 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="d-flex">
-                    <a href="#" class="Subscribe" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
+                <div class="dropstart">
+                    <a href="#" class="Subscribe dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Subscribe
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-wide p-4">
+                        <form>
+                            <input type="text" id="firstname" name="firstname" class="form-control mb-2" placeholder="First Name"
+                                aria-label="First Name" required />
+                            <input type="email" id="email" name="email" class="form-control mb-2" placeholder="Email" aria-label="Email"
+                                required />
+                            <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

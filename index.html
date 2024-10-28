@@ -36,6 +36,64 @@
             color: var(--highlight);
         }
 
+        .dropdown-menu {
+            padding: 0;
+            border: 1px solid var(--highlight);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .dropdown-menu-wide {
+            min-width: 500px;
+            min-height: 290px;
+        }
+
+        .dropdown-item {
+            padding: 0.15rem 1rem;
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.2;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--highlight);
+            color: var(--white);
+        }
+
+
+        .welcome-section {
+            position: relative;
+            padding: 0; 
+            min-height: 70vh;
+            color: var(--white);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .welcome-section .carousel {
+            height: 100%;
+        }
+
+        .welcome-section .carousel-item {
+            height: 100%;
+            width: 140vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+  
+
+        .welcome-section .welcome-content {
+            position: relative;
+            z-index: 2;
+            padding: 6rem 0;
+        }
+
+
+        .lead{
+            color: white;
+        }
+
         h2,
         h3,
         p {
@@ -51,6 +109,7 @@
             font-weight: bold;
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
             margin-right: 1rem;
+            text-decoration: none;
         }
 
         .Subscribe:hover,
@@ -144,13 +203,26 @@
         .modal-body button:hover {
             background-color: var(--accent);
         }
+
+        @media (max-width: 768px) {
+            .navbar-brand {
+                text-align: center;
+                width: 100%;
+            }
+
+            .Subscribe {
+                text-align: center;
+                width: 50%;
+                margin-left: 10rem;
+            }
+        }
     </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Lifestyle Vibes</a>
+            <a class="navbar-brand d-flex justify-content-center" href="index.html">Lifestyle Vibes</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
                 aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -178,22 +250,53 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="d-flex">
-                    <a href="#" class="Subscribe" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</a>
+                <div class="dropstart">
+                    <a href="#" class="Subscribe dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Subscribe
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-wide p-4">
+                        <form>
+                            <input type="text" id="firstname" name="firstname" class="form-control mb-2" placeholder="First Name"
+                                aria-label="First Name" required />
+                            <input type="email" id="email" name="email" class="form-control mb-2" placeholder="Email" aria-label="Email"
+                                required />
+                            <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
     <main class="container">
-        <section class="my-5">
-            <hgroup>
-                <h2>Welcome to the Lifestyle Hub</h2>
-                <h3>Explore trends, wellness, and living your best life</h3>
-            </hgroup>
-            <p>
-                Lifestyle is all about finding balance, embracing health, and living in the moment. Whether you're into
-                fitness, mindfulness, or just looking to elevate your daily routines, you've come to the right place.
-            </p>
+        <section class="welcome-section text-center text-white d-flex align-items-center justify-content-center">
+            <div id="welcomeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="background-image: url('Gambar/meditation.jpg');">
+                        <div class="overlay"></div>
+                        <div class="welcome-content container">
+                            <h1 class="display-4 fw-bold">Welcome to Lifestyle Hub</h1>
+                            <p class="lead">Discover trends, wellness tips, and ways to live your best life.</p>
+                            <a href="index.html" class="btn btn-lg btn-light mt-3">Explore More</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="background-image: url('Gambar/healtyr.jpg');">
+                        <div class="overlay"></div>
+                        <div class="welcome-content container">
+                            <h1 class="display-4 fw-bold">Stay Fit and Healthy</h1>
+                            <p class="lead">Healthy recipes and fitness tips to elevate your wellness journey.</p>
+                            <a href="index.html" class="btn btn-lg btn-light mt-3">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item" style="background-image: url('Gambar/fitness.jpg');">
+                        <div class="overlay"></div>
+                        <div class="welcome-content container">
+                            <h1 class="display-4 fw-bold">Embrace the Outdoors</h1>
+                            <p class="lead">Find the best outdoor fitness routines to reconnect with nature.</p>
+                            <a href="index.html" class="btn btn-lg btn-light mt-3">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section>
@@ -229,26 +332,40 @@
                 </article>
             </div>
         </section>
+
+        <section>
+            <h3 class="text-center section-title">Fashion & Trends</h3>
+            <div class="grid">
+                <article class="card">
+                    <img src="Summer/1.webp" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Summer Fashion</h5>
+                        <p class="card-text">Explore the latest trends for Summer Fashion season and find your perfect style.</p>
+                        <a href="summer.html" class="btn">Read More</a>
+                    </div>
+                </article>
+        
+                <article class="card">
+                    <img src="Winter/1.avif" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Winter Fashion</h5>
+                        <p class="card-text">Explore the latest trends for Winter Fashion season and find your perfect style.</p>
+                        <a href="winter.html" class="btn">Read More</a>
+                    </div>
+                </article>
+        
+                <article class="card">
+                    <img src="Fall/1.webp" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Fall Fashion</h5>
+                        <p class="card-text">Explore the latest trends for Fall Fashion season and find your perfect style.</p>
+                        <a href="fall.html" class="btn">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
 
-    <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="subscribeModalLabel">Join Our Community</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form class="grid">
-                        <input type="text" id="firstname" name="firstname" placeholder="First Name"
-                            aria-label="First Name" required />
-                        <input type="email" id="email" name="email" placeholder="Email" aria-label="Email" required />
-                        <button type="submit" onclick="event.preventDefault()">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
         <div class="modal-dialog">
