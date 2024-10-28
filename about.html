@@ -152,6 +152,14 @@
             color: blue;
         }
 
+        .custom-subscribe-form {
+            min-width: 400px;
+            max-width: 500px;
+            min-height: 250px;
+            width: 100%;
+            padding: 20px;
+        }
+
         @media (max-width: 768px) {
             .navbar-brand {
                 text-align: center;
@@ -198,11 +206,11 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="dropstart">
+                <div class="nav-item dropdown">
                     <a href="#" class="Subscribe dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         Subscribe
                     </a>
-                    <div class="dropdown-menu dropdown-menu-wide p-4">
+                    <div class="dropdown-menu dropdown-menu-end custom-subscribe-form p-4">
                         <form>
                             <input type="text" id="firstname" name="firstname" class="form-control mb-2" placeholder="First Name"
                                 aria-label="First Name" required />
@@ -255,28 +263,28 @@
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="10000">
                     <img src="Gambar/waazo.jpg" class="d-block" alt="Mike Wazowski">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption p-3 rounded">
                         <h5>Mike Wazowski</h5>
                         <p>Founder & Wellness Coach</p>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
                     <img src="Gambar/remy.jpg" class="d-block" alt="Remy The Rodent">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption p-3 rounded">
                         <h5>Remy The Rodent</h5>
                         <p>Nutrition Expert</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="Gambar/mike.jpg" class="d-block" alt="Mike O Hearn">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption p-3 rounded">
                         <h5>Mike O Hearn</h5>
                         <p>Fitness Trainer</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="Gambar/vegan.jpg" class="d-block" alt="Team Member">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption p-3 rounded">
                         <h5>The Vegan Teacher</h5>
                         <p>Mindfulness Instructor</p>
                     </div>
@@ -292,25 +300,6 @@
             </button>
         </div>
     </main>
-
-    <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="subscribeModalLabel">Join Our Community</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form class="grid">
-                        <input type="text" id="firstname" name="firstname" placeholder="First Name"
-                            aria-label="First Name" required />
-                        <input type="email" id="email" name="email" placeholder="Email" aria-label="Email" required />
-                        <button type="submit" onclick="event.preventDefault()">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
         <div class="modal-dialog">

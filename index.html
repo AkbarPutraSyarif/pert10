@@ -204,6 +204,14 @@
             background-color: var(--accent);
         }
 
+        .custom-subscribe-form {
+            min-width: 400px;
+            max-width: 500px;
+            min-height: 250px;
+            width: 100%;
+            padding: 20px;
+        }
+
         @media (max-width: 768px) {
             .navbar-brand {
                 text-align: center;
@@ -250,11 +258,11 @@
                         </ul>
                     </li>
                 </ul>
-                <div class="dropstart">
+                <div class="nav-item dropdown">
                     <a href="#" class="Subscribe dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         Subscribe
                     </a>
-                    <div class="dropdown-menu dropdown-menu-wide p-4">
+                    <div class="dropdown-menu dropdown-menu-end custom-subscribe-form p-4">
                         <form>
                             <input type="text" id="firstname" name="firstname" class="form-control mb-2" placeholder="First Name"
                                 aria-label="First Name" required />
